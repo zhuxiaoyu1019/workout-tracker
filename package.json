@@ -1,0 +1,29 @@
+{
+  "name": "workout-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "tw:build": "tailwindcss build src/styles.css -c config/tailwind.config.js -o public/styles.css",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuxiaoyu1019/workout-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhuxiaoyu1019/workout-tracker/issues"
+  },
+  "homepage": "https://github.com/zhuxiaoyu1019/workout-tracker#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
+    "postcss": "^8.2.5",
+    "tailwindcss": "^2.0.3"
+  }
+}

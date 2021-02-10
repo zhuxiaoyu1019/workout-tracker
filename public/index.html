@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workout Trakcer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="p-12">
+    <h1 class="text-5xl font-thin text-center mt-24">Mongo Workout Tracker</h1>
+    <h3 class="text-m font-thin text-center mt-3" id="time"></h3>
+    <section class="mt-16">
+        <section id="records"></section>
+
+        <section class="flex items-center justify-center mt-14" id="add-btn-container">
+            <button class="w-80 card cursor-pointer button-transition" id="add-btn">
+                <svg class="w-10 stroke-current mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+            </button>
+        </section>
+    </section>
+
+    <form
+        class="flex-col justify-center items-start card space-y-6 hidden transition-transform duration-500 ease-in-out"
+        id="add-form">
+        <section class="flex justify-end">
+            <svg class="w-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" id="close-btn">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </section>
+        <section>
+            <label class="font-thin" for="exercise">Exercise</label>
+            <input class="inp" type="text" id="exercise">
+        </section>
+        <section>
+            <label class="font-thin" for="type">Type</label>
+            <select class="inp" type="text" id="type" name="type">
+                <option value="" selected disabled></option>
+                <option value="aerobic">Aerobic</option>
+                <option value="strength">Strength</option>
+                <option value="flexibility">Flexibility</option>
+                <option value="balance">Balance</option>
+            </select>
+        </section>
+        <section>
+            <label class="font-thin" for="weight">Weight(lbs)</label>
+            <input class="inp" type="number" id="weight">
+        </section>
+        <section>
+            <label class="font-thin" for="sets">Sets</label>
+            <input class="inp" type="number" id="sets">
+        </section>
+        <section>
+            <label class="font-thin" for="reps">Reps</label>
+            <input class="inp" type="number" id="reps">
+        </section>
+        <section>
+            <label class="font-thin" for="duration">Duration</label>
+            <input class="inp" type="number" id="duration">
+        </section>
+        <section>
+            <label class="font-thin" for="distance">Distance</label>
+            <input class="inp" type="number" id="distance">
+        </section>
+        <section class="flex justify-center">
+            <button
+                class="rounded py-2 px-3 uppercase text-m font-normal cursor-pointer tracking-wider border-primary-100 hover:border-primary-200 border-2 w-48 button-transition"
+                id="submit-btn">add
+            </button>
+            <button
+                class="rounded py-2 px-3 uppercase text-m font-normal cursor-pointer tracking-wider border-primary-100 hover:border-primary-200  border-2 w-48 button-transition hidden"
+                id="update-btn">update
+            </button>
+        </section>
+    </form>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
